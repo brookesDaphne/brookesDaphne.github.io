@@ -1,0 +1,105 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Week 3 Lab</title>
+<!-- Daphne Brookes -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/3.3…/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/c…/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/…/l…/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/…/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+	note that comments don't show up in the browser.
+<div class="col-sm-4 col-lg-6">
+<h2>Question 1</h2>
+	<pre>
+<!-- prompts user to enter their age -->
+var userAge = prompt("Please enter your age");
+<!-- if they enter 0 -->
+if (userAge === 0) {
+<!-- the alert will say baby -->
+    alert("So you're a baby!");
+<!-- if they enter younger than 0 or older than 200, it will say -->
+} else if (userAge < 0 || userAge > 200) {
+<!-- you’re lying -->
+    alert("I think you may be lying about your age");
+} else {
+<!-- if they enter 0-120, it will say -->
+    alert("That's a good age");
+}
+<!-- could be improved with more age ranges and corresponding alerts. For example, between 0-5, “Wow, you’re good at using technology!” and many more -->
+</pre>
+</div>
+
+<div class="col-sm-4 col-lg-6">
+	<h2>Question 2</h2>
+	<pre>
+		<!-- loop with a starting value, end number, and increment value -->
+for (var i = 12; i < 145; i += 12) {
+<!-- writes the results -->
+    document.write(i);
+}
+<!-- answers could’ve been written on multiple lines, or spaced out, or with commas, to make it possible to read. I could try adding the code it, but decided to keep it concise -->
+	</pre>
+</div>
+
+<div class="col-sm-4 col-lg-6">
+	<h2>Question 3</h2>
+<pre>
+	<!--function and parameters-->
+function answer(multiply, start, end) {
+<!--range of numbers, when to end -->
+    for (; start <= end; start++) {
+<!--states numbers and to multiply them -->
+        document.write(multiply + " * " + start + " = " +
+<!-- separates answers on lines -->
+            start * multiply + "<br>");
+    }
+}
+<!-- parameters with the times table and values for start and end -->
+answer(5, 3, 10);
+</pre>
+</div>
+
+<div class="col-sm-4 col-lg-6">
+<h2>Question 4</h2>
+<pre>
+<!-- announce function and parameters -->
+function answer(multiply, start, end) {
+<!-- when to end -->
+    for (; start <= end; start++) {
+<!-- writes the multiplication -->
+        document.write(multiply + " * " + start + " = " +
+            start * multiply + "<br>");
+    }
+}
+<!-- calls multiplication -->
+var multiply;
+<!-- prompts the user to request times table -->
+while ((multiply = prompt("Enter the times table", -1)) != -1) {
+<!--makes sure the user enters a valid number -->
+    while (isNaN(multiply) === true)
+    {
+<!-- prompts user to re-enter using a valid number -->
+        multiply = prompt(multiply + " is not a valid number, please retry", -1);
+    }
+<!-- break if user enters -1 -->
+    if (multiply == -1) {
+
+        break;
+    }
+<!--writes the answer neatly -->
+    document.write("<br>The " + multiply + " times table<br>");
+    answer(multiply, 1, 12);
+}
+<!-- at zero, it could alert saying won’t go much lower than that! -->
+</pre>
+</div>
+
+</div>
+</div>
+</body>
+</html>
