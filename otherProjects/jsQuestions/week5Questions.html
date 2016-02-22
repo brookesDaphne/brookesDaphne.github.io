@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap 3 Responsive Template</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- I styled the answer to question one to make it blue-->
+  <style>
+    #q1Result {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!--
+    <div class="row">
+        <div class="col-md-12">
+Lorem Ipsum
+-->
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#q1" aria-controls="home" role="tab" data-toggle="tab">q1</a></li>
+      <li role="presentation"><a href="#q2" aria-controls="profile" role="tab" data-toggle="tab">q2</a></li>
+      <li role="presentation"><a href="#q3" aria-controls="messages" role="tab" data-toggle="tab">q3</a></li>
+      <li role="presentation"><a href="#q4" aria-controls="messages" role="tab" data-toggle="tab">q4</a></li>
+      <li role="presentation"><a href="#q5" aria-controls="messages" role="tab" data-toggle="tab">q5</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      <!-- Question 1 Pre -->
+      <div role="tabpanel" class="tab-pane active" id="q1">
+        <div class="row">
+          <div class="col-md-12">
+            <pre>  function getTriangle() {
+                var str = "";
+
+                for (var i = 1; i <= 6; i++) {
+                  //write i stars plus <br/>
+
+                  for (var j = 1; j <= i; j++) {
+                    str = str + "#";
+                  }
+                  str = str + "<br/>";
+                }
+
+        //write to the screen
+                $("#q1Result").html(str);
+
+              }
+              $("#q1Button").on("click", function() {
+                var result = getTriangle();
+              });
+            </pre>
+          </div>
+
+          <!-- Question 1 Button -->
+          <div class="col-md-12">
+            <button id="q1Button" class="btn btn-default" type="button">Button</button>
+          </div>
+
+          <div class="col-md-12">
+
+            <!-- Question 1 Result -->
+            <div id="q1Result">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Question 2 Pre-->
+      <div role="tabpanel" class="tab-pane" id="q2">
+        <div class="row">
+          <div class="col-md-12">
+            <pre>
+for( int i=1; i<=100; ++i ){
+  bool modThree = ( i % 3 ? true : false );
+  bool modFive = ( i % 5 ? true : false );
+if( !modThree and !modFive ){
+  print i;
+}else{
+  if( modThree ) print "Foo";
+  if( modFive ) print "Bar";
+  }
+}
+            </pre>
+          </div>
+
+          <!-- Question 2 Button-->
+          <div class="col-md-12">
+            <button id="q2Button" class="btn btn-success" type="button">Button</button>
+          </div>
+
+          <div class="col-md-12">
+
+            <div id="q2Result">
+              question 2 result
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="q2">...</div>
+
+      <!-- Question 3 Pre-->
+      <div role="tabpanel" class="tab-pane active" id="q3">
+        <div class="row">
+          <div class="col-md-12">
+            <pre>
+  function chessBoard() {
+        var size = prompt("Please enter a Number");
+        var line = '';
+        var print = "";
+        var i = 0;
+
+        for (i = 0; i < size / 2; i++) {
+          line = print + line + '# ';
+        }
+
+        for (i = 0; i < size; i++) {
+          if (i % 2 === 0) {
+            print = print + (' ' + line) + "<br/>";
+          } else {
+            print = print + (line) + "<br/>";
+          }
+        }
+        $("#q3Result").html(print);
+      }
+
+
+      $("#q3Button").on("click", function() {
+
+        chessBoard();
+      });
+            </pre>
+          </div>
+
+          <!-- Question 3 Button -->
+          <div class="col-md-12">
+            <button id="q3Button" class="btn btn-default" type="button">Button</button>
+          </div>
+
+          <div class="col-md-12">
+
+            <!-- Question 3 Result -->
+            <div id="q3Result">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="q3">...</div>
+
+      <!-- Question 4 Pre-->
+      <div role="tabpanel" class="tab-pane active" id="q4">
+        <div class="row">
+          <div class="col-md-12">
+            <pre>
+  function countBs(bString) {
+        var count = 0;
+        for (var i = 0; i < bString.length; i++) {
+          if (bString.charAt(i) == 'B') {
+            count = (count + 1);
+          }
+        }
+        return count;
+      }
+
+
+      $("#q4Button").on("click", function() {
+
+        var userInput = prompt("");
+        var x = countBs(userInput);
+
+        $("#q4Result").html(x);
+      });
+            </pre>
+          </div>
+
+          <!-- Question 4 Button -->
+          <div class="col-md-12">
+            <button id="q4Button" class="btn btn-default" type="button">Button</button>
+          </div>
+
+          <div class="col-md-12">
+
+            <!-- Question 4 Result -->
+            <div id="q4Result">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Question 5 Pre-->
+      <div role="tabpanel" class="tab-pane active" id="q5">
+        <div class="row">
+          <div class="col-md-12">
+            <pre>
+function countChar(cString, charMatch) {
+        var count = 0;
+        for (var i = 0; i < cString.length; i++) {
+          if (cString.charAt(i) == charMatch) {
+            count = (count + 1);
+          }
+        }
+        return count;
+      }
+      $("#q5Button").on("click", function() {
+
+        var inputOne = prompt("");
+        var inputTwo = prompt("")
+
+        var t = countChar(inputOne, inputTwo)
+        $("#q5Result").html(t);
+      });
+
+      </pre>
+          </div>
+
+          <!-- Question 5 Button -->
+          <div class="col-md-12">
+            <button id="q5Button" class="btn btn-default" type="button">Button</button>
+          </div>
+
+          <div class="col-md-12">
+
+            <!-- Question 5 Result -->
+            <div id="q5Result">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- end divs for tab content and the container-->
+    </div>
+  </div>
+
+
+  <script>
+    $(document).ready(function() {
+      //  question 1
+      function getTriangle() {
+        var str = "";
+
+        for (var i = 1; i <= 6; i++) {
+          //write i stars plus <br/>
+
+          for (var j = 1; j <= i; j++) {
+            str = str + "#";
+          }
+          str = str + "<br/>";
+        }
+
+        //write to the screen
+        $("#q1Result").html(str);
+
+      }
+      $("#q1Button").on("click", function() {
+        var result = getTriangle();
+      });
+
+      $("#q2Button").on("click", function() {
+        $("#q2Result").html("answer two!");
+      });
+
+      $("#q3Button").on("click", function() {
+        $("#q3Result").html("#");
+      });
+
+      $("#q4Button").on("click", function() {
+        $("#q4Result").html("answer four!");
+      });
+
+      $("#q5Button").on("click", function() {
+        $("#q5Result").html("answer five!");
+      });
+
+
+    });
+  </script>
+</body>
+
+</html>
