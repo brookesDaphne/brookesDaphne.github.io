@@ -179,7 +179,7 @@ if( !modThree and !modFive ){
 
       $("#q4Button").on("click", function() {
 
-        var userInput = prompt("");
+        var userInput = prompt("Please enter a number");
         var x = countBs(userInput);
 
         $("#q4Result").html(x);
@@ -218,8 +218,8 @@ function countChar(cString, charMatch) {
       }
       $("#q5Button").on("click", function() {
 
-        var inputOne = prompt("");
-        var inputTwo = prompt("")
+        var inputOne = prompt("what is your name?");
+        var inputTwo = prompt("what is your age?")
 
         var t = countChar(inputOne, inputTwo)
         $("#q5Result").html(t);
