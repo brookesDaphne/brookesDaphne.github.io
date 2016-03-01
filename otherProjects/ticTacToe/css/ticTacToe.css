@@ -1,0 +1,43 @@
+.row {
+  margin-top: 5px;
+}
+.nine, .col-md-4 {
+  height: 300px;
+  text-align: center;
+}
+.innerNine {
+  height: 100px;
+  text-align: center;
+}
+.o {
+  font-size: 120px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  padding-bottom: 10px;
+  color: green;
+}
+.x {
+  font-size: 120px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  padding-bottom: 10px;
+  color: red;
+}
+.green {
+  color: blue;
+}
+.allBorders {
+  border: 5px black solid;
+}
+.borderBottom {
+  border-bottom: 3px purple solid;
+}
+.borderTop {
+  border-top: 3px purple solid;
+}
+.borderLeftAndRight {
+  border-left: 3px orange solid;
+  border-right: 3px orange solid;
+}
