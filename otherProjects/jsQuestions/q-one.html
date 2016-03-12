@@ -1,21 +1,26 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Week 3 Lab</title>
-<!-- Daphne Brookes -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/3.3…/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/c…/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/…/l…/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/…/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Week 3 Lab</title>
+	<!-- Daphne Brookes -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/3.3…/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/c…/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/…/l…/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/…/bootstrap.min.js"></script>
 </head>
+
 <body>
-<div class="container">
-<div class="row">
-	note that comments don't show up in the browser.
-<div class="col-sm-4 col-lg-6">
-<h2>Question 1</h2>
-	<pre>
+	<div class="container">
+		<div class="row">
+			hit the back button kiddo ^
+
+			<br>
+			<br> note that comments don't show up in the browser.
+			<div class="col-sm-4 col-lg-6">
+				<h2>Question 1</h2>
+				<pre>
 <!-- prompts user to enter their age -->
 var userAge = prompt("Please enter your age");
 <!-- if they enter 0 -->
@@ -32,11 +37,11 @@ if (userAge === 0) {
 }
 <!-- could be improved with more age ranges and corresponding alerts. For example, between 0-5, “Wow, you’re good at using technology!” and many more -->
 </pre>
-</div>
+			</div>
 
-<div class="col-sm-4 col-lg-6">
-	<h2>Question 2</h2>
-	<pre>
+			<div class="col-sm-4 col-lg-6">
+				<h2>Question 2</h2>
+				<pre>
 		<!-- loop with a starting value, end number, and increment value -->
 for (var i = 12; i < 145; i += 12) {
 <!-- writes the results -->
@@ -44,11 +49,11 @@ for (var i = 12; i < 145; i += 12) {
 }
 <!-- answers could’ve been written on multiple lines, or spaced out, or with commas, to make it possible to read. I could try adding the code it, but decided to keep it concise -->
 	</pre>
-</div>
+			</div>
 
-<div class="col-sm-4 col-lg-6">
-	<h2>Question 3</h2>
-<pre>
+			<div class="col-sm-4 col-lg-6">
+				<h2>Question 3</h2>
+				<pre>
 	<!--function and parameters-->
 function answer(multiply, start, end) {
 <!--range of numbers, when to end -->
@@ -62,11 +67,11 @@ function answer(multiply, start, end) {
 <!-- parameters with the times table and values for start and end -->
 answer(5, 3, 10);
 </pre>
-</div>
+			</div>
 
-<div class="col-sm-4 col-lg-6">
-<h2>Question 4</h2>
-<pre>
+			<div class="col-sm-4 col-lg-6">
+				<h2>Question 4</h2>
+				<pre>
 <!-- announce function and parameters -->
 function answer(multiply, start, end) {
 <!-- when to end -->
@@ -97,9 +102,10 @@ while ((multiply = prompt("Enter the times table", -1)) != -1) {
 }
 <!-- at zero, it could alert saying won’t go much lower than that! -->
 </pre>
-</div>
+			</div>
 
-</div>
-</div>
+		</div>
+	</div>
 </body>
+
 </html>
