@@ -3,7 +3,7 @@
   "colour": "blue",
   "style": "sporty",
   "image": "images/cap1.png",
-  "commments": [{
+  "comments": [{
 
     "username": "swaggymcjaggy",
     "stars": 5,
@@ -24,7 +24,7 @@
   "colour": "red",
   "style": "gangster",
   "image": "images/cap2.png",
-  "commments": [{
+  "comments": [{
 
     "username": "Crazy_cat_lady",
     "stars": 2,
@@ -46,7 +46,7 @@
   "colour": "dark grey",
   "style": "casual",
   "image": "images/cap3.png",
-  "commments": [{
+  "comments": [{
 
     "username": "lowkeyfeelinu",
     "stars": 4,

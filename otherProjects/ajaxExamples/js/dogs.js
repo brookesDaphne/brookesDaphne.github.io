@@ -9,13 +9,32 @@ $(document).ready(function() {
             '<div class="type">' + item.type + '</div>' +
             '<div class="colour">' + item.colour + '</div>' +
             '<div class="style">' + item.style + '</div>' +
-            '<img src="' + item.image + '"/>' +
+            '<img class="capImage" src="' + item.image + '"/>' +
             '<div class="commentsContainer">';
-console.dir(item.comments);
+
+          console.dir(item.comments);
+
           $.each(item.comments, function(ind, i) {
               html += '<div class="buyerName">' + i.username + '</div>' +
-                '<div class="buyerComment">' + i.comment + '</div>';
+                '<div class="buyerComment">' + i.comment + '</div>' +
+                '<div class="buyerStars">';
 
+var numStars = Number(i.stars);
+
+              for (var i = 1; i <= 5; i++) {
+                if (i <= numStars) {
+                  html += '<img src="images/fullheart.gif"/>';
+
+                } else {
+                  html += '<img src="images/emptyheart.gif"/>';
+
+
+                }
+
+
+              }
+
+              html += '</div>'; //end stars
             }) //each comment
 
           html += '</div>' + //commentsContainer
