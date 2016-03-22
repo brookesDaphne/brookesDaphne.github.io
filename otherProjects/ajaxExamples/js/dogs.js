@@ -10,7 +10,13 @@ $(document).ready(function() {
             '<div class="colour">' + item.colour + '</div>' +
             '<div class="style">' + item.style + '</div>' +
             '<img class="capImage" src="' + item.image + '"/>' +
-            '<div class="commentsContainer">';
+            //'<div class="commentsContainer">';
+
+
+            '<div class="panel panel default">'+
+
+            '<div class="panel-heading">Reviews</div>';
+
 
           console.dir(item.comments);
 
@@ -37,7 +43,7 @@ var numStars = Number(i.stars);
               html += '</div>'; //end stars
             }) //each comment
 
-          html += '</div>' + //commentsContainer
+          html += '</div>' + //end panel
             '</div>'; //col-md-4
 
 
@@ -68,4 +74,21 @@ var numStars = Number(i.stars);
   </div> //end stars
   </div> //end commentsContainer
   </div> //end cap
+
+
+  <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+  <p>...</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+  ...
+  </table>
+  </div>
+
+
+
   */
