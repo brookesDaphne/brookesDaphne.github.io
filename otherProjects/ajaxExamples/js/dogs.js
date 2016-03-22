@@ -23,7 +23,7 @@ var numStars = Number(i.stars);
 
               for (var i = 1; i <= 5; i++) {
                 if (i <= numStars) {
-                  html += '<img src="images/fullheart.gif"/>';
+                  html += '<img class="fullheart" src="images/fullheart.gif"/>';
 
                 } else {
                   html += '<img src="images/emptyheart.gif"/>';
