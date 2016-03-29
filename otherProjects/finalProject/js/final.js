@@ -22,6 +22,7 @@ $(document).ready(function() {
         if (partial == "homePage") { //ajax get home.html
           $.get("partials/home.html", function(data) {
             $("#pageContent").html(data);
+            $('.carousel').carousel();
 
           })
         } else if (partial == "models") { //ajax get models.html
