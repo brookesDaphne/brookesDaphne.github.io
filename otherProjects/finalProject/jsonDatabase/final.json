@@ -1,0 +1,67 @@
+[{
+  "type": "baseball",
+  "colour": "blue",
+  "style": "sporty",
+  "image": "images/red-girl.jpeg",
+  "comments": [{
+
+    "username": "swaggymcjaggy",
+    "stars": 5,
+    "comment": "What a great wear."
+  }, {
+    "username": "sunny25",
+    "stars": 3,
+    "comment": "Love the colour"
+
+  }, {
+    "username": "drunkiefunky",
+    "stars": 1,
+    "comment": "Hated this whole experience"
+  }]
+
+}, {
+  "type": "snap back",
+  "colour": "red",
+  "style": "gangster",
+  "image": "images/cap2.png",
+  "comments": [{
+
+    "username": "Crazy_cat_lady",
+    "stars": 2,
+    "comment": "Goodbye bad boys"
+  }, {
+    "username": "bigandbeautiful",
+    "stars": 4,
+    "comment": "Hello love lives"
+
+  }, {
+    "username": "hotandwasted",
+    "stars": 1,
+    "comment": "WOW"
+  }]
+
+
+}, {
+  "type": "bucket",
+  "colour": "dark grey",
+  "style": "casual",
+  "image": "images/cap3.png",
+  "comments": [{
+
+    "username": "lowkeyfeelinu",
+    "stars": 4,
+    "comment": "swag casualy"
+  }, {
+    "username": "happyandiknowit",
+    "stars": 2,
+    "comment": "I love this hat. Bought it for my cat."
+
+  }, {
+    "username": "ByeWorld19",
+    "stars": 5,
+    "comment": "Wear this errryday"
+  }]
+
+
+
+}]
