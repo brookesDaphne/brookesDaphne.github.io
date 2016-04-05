@@ -26,8 +26,6 @@ $(document).ready(function() {
         })
       } else if (partial == "models") { //ajax get models.html
 
-
-
         //js was pasted here from dogs.json from a previous assignment
 
         $.getJSON("jsonDatabase/final.json", function(data) {
@@ -42,11 +40,9 @@ $(document).ready(function() {
                 '<img class="capImage" src="' + item.image + '"/>' +
                 //'<div class="commentsContainer">';
 
-
                 '<div class="panel panel default">' +
 
                 '<div class="panel-heading">Reviews</div>';
-
 
               console.dir(item.comments);
 
@@ -116,7 +112,6 @@ $(document).ready(function() {
 
                 sendConfirmation();
               }
-
 
             }) //click
 
@@ -227,20 +222,17 @@ $(document).ready(function() {
 
         }) //formData
 
+        //alerts when they click the purchase button repeating their order
+
 alert("Sending to database" + JSON.stringify(order));
 $("#successMsg").html("Order Received!<br/><br/>" +
 order.catSelect + "will be delivered on" +
 order.startRentDate +
-"<img id='paws' src='images/catPaws.jpeg'>");
-
-
+"<img id='paws' src='images/pink.jpeg'>");
 
     } //sendConfirmation
-
 
     //begin the program, get the homepage
     getPartial("homePage");
 
   }) //end brackets for ready
-
-//insert an alert that happens when they click the purchase button repeating their order

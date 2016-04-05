@@ -1,8 +1,8 @@
 [{
   "type": "Day Time",
   "colour": "This hat is appropriate to wear during the day. With your friends at the beach. At the mall. With your cat. Or your favourite pair of shoes.",
-  "style": "sporty",
-  "image": "images/fedora-babes.jpeg",
+  "style": "CUTSY",
+  "image": "images/pink.png",
   "comments": [{
 
     "username": "swaggymcjaggy",
@@ -21,9 +21,9 @@
 
 }, {
   "type": "Night Time",
-  "colour": "This style is great when you're going to the bar or being hooligans with your hipster friends. ",
-  "style": "gangster",
-  "image": "images/night-hat.jpeg",
+  "colour": "This style is great when you're going to the bar or being hooligans with your hipster friends. The dark colours help you blend in with the night.",
+  "style": "GANGSTER",
+  "image": "images/night.png",
   "comments": [{
 
     "username": "Crazy_cat_lady",
@@ -44,8 +44,8 @@
 }, {
   "type": "Run Way",
   "colour": "This hat is great for playing dress up with your little cousins. Dancing around to Taylor Swift. And pretending that you are an animal. Fierce.",
-  "style": "casual",
-  "image": "images/fuzy.jpeg",
+  "style": "CASUAL",
+  "image": "images/fuzy.png",
   "comments": [{
 
     "username": "lowkeyfeelinu",
