@@ -1,0 +1,51 @@
+/*Stylesheet for all pages in final projects website*/
+
+/*NAV BAR*/
+/*changed the font for the navigation bar*/
+#homePage, #models, #order{
+  font-family: 'Amatic SC', cursive;
+  font-size: 200%;
+}
+
+/*
+.button{
+  background-color: black;
+}
+/*change colour of nav BROKEN*/
+
+/*HOME PAGE*/
+#hat-swag{
+  font-family: 'Roboto';
+  font-size: 30px;
+  text-align: center;
+  text-decoration: overline;
+  background-color: black;
+  color: white;
+  padding-top: 7px;
+}
+
+/*ORDER PAGE*/
+
+/*make the background coral and the text white*/
+#orderForm{
+color: white;
+background-color: #f08080;
+font-size: 15px;
+}
+
+
+
+/*
+.btn{
+  text-transform: uppercase;
+}
+*/
+
+/*changes the color of the button when you mouse over to look cool*/
+#submitButton{
+  background-color: #009100;
+  color: white;
+  text-transform: uppercase;
+  font-size: 190%;
+  text-decoration: overline;
+}

@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
     //to change the nav depending on what page is being viewed
-
     //get all the nav li, add click event
     $(".nav").find("li").on("click", function() {
 
@@ -85,11 +84,43 @@ $(document).ready(function() {
 
         //end of js pasted
 
-
-
+        //I THINK U GET ORDER PAGE HERE
       } else if (partial == "order") { //ajax get order.html
-        $.get("partials/order.html", function(data) {
+        $.get("partials/order2.html", function(data) {
           $("#pageContent").html(data);
+
+
+          //activate the datepicker
+          $('#startRentDate, #endRentDate').datepicker({});
+
+          //click event
+          //When you click the submitButton it validates
+          $("#submitButton").on("click", function() {
+
+              //make empty areas red bc invalid
+              $("input, select").filter(function() {
+                return !this.value;
+              }).closest("div").addClass("has-error");
+
+              //remove the red for areas that have been filled in
+              $("input, select").filter(function() {
+                return this.value;
+              }).closest("div").removeClass("has-error");
+
+              //make a variable errors to target areas with errors
+              var errors = $(".has-error");
+
+              //if there are no errors, confirm the request
+              if (errors.length < 1) {
+                //  alert("no");
+
+                sendConfirmation();
+              }
+
+
+            }) //click
+
+
 
           //start takeAnOrder.js copy
 
@@ -178,7 +209,38 @@ $(document).ready(function() {
       $("#pageContent").fadeIn();
 
     }
+
+    //tell the user they made a purchase
+    function sendConfirmation() {
+
+      //make var to record data for database
+      var order = {};
+
+      var formData = $("input, select");
+      //for each jquery object
+      formData.each(function() {
+          //get the id of the element
+          var id = $(this).attr("id");
+          //set the field and the value
+          order[id] = $(this).val();
+
+
+        }) //formData
+
+alert("Sending to database" + JSON.stringify(order));
+$("#successMsg").html("Order Received!<br/><br/>" +
+order.catSelect + "will be delivered on" +
+order.startRentDate +
+"<img id='paws' src='images/catPaws.jpeg'>");
+
+
+
+    } //sendConfirmation
+
+
     //begin the program, get the homepage
     getPartial("homePage");
 
   }) //end brackets for ready
+
+//insert an alert that happens when they click the purchase button repeating their order
