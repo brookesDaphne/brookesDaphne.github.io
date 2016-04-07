@@ -224,7 +224,7 @@ $(document).ready(function() {
 
         //alerts when they click the purchase button repeating their order
 
-alert("Sending to database" + JSON.stringify(order));
+alert("Sending to database and checking the validity of your credit" + JSON.stringify(order));
 $("#successMsg").html("Order Received!<br/><br/>" +
 order.catSelect + "will be delivered on" +
 order.startRentDate +

@@ -1,25 +1,26 @@
-/*Stylesheet for all pages in final projects website*/
+/*Stylesheet for all pages in final projects website: HAT SWAG*/
 
-/*NAV BAR*/
+
+/*NAV BAR on all pages*/
+
+
 /*changed the font for the navigation bar*/
-#homePage, #models, #order{
+#homePage, #models, #order {
   font-family: 'Amatic SC', cursive;
   font-size: 200%;
 }
 
-#main-title{
-color: white;
+/*coloured the title white*/
+#main-title {
+  color: white;
 }
 
-/*
-.button{
-  background-color: black;
-}
-/*change colour of nav BROKEN*/
 
 /*HOME PAGE*/
-/*i added to the design of the heading*/
-#hat-swag{
+
+
+/*added to the design of the heading*/
+#hat-swag {
   font-family: 'Roboto';
   font-size: 30px;
   text-align: center;
@@ -29,31 +30,104 @@ color: white;
   padding-top: 7px;
 }
 
+.carousel-caption{
+  font-size: 2px;
+}
+
+/*background colour and border colour and shape*/
+  .carousel {
+    background: #123123;
+    margin-top: 5px;
+    border: solid black 10px;
+  }
+
+/*image placement*/
+  .carousel .item img {
+    margin: 0 auto;
+    /* Align slide image horizontally center */
+    max-height: 400px;
+  }
+
+/*adjustment*/
+  .bs-example {
+    margin: 20px;
+  }
+
+/*carousel caption's size and style*/
+  h1 {
+    text-shadow: 20px;
+    font-size: 2700%;
+    text-transform: uppercase;
+    margin-top: 10%;
+    text-align: center;
+    margin-bottom: 20%;
+  }
+
+
+/*MODELS PAGE*/
+
+
+/*making the 3 titles bigger*/
+.type {
+  padding-top: 20px;
+  font-size: 200%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*justified, lighten and placed description*/
+.colour {
+  padding: 10px 40px 10px 20px;
+  text-align: justify;
+  font-weight: lighter;
+}
+
+/*making the word cursive and purple*/
+.style {
+  font-family: cursive;
+  font-size: 150%;
+  color: purple;
+}
+
+/*made the username in the reviews section bold and gave it room*/
+.buyerName {
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: underline;
+  color: #033500;
+  padding-top: 7px;
+}
+
+/*made their comment italic*/
+.buyerComment {
+  font-style: italic;
+}
+
+/*making the full hearts the perfect size beside the empties*/
+.fullheart {
+  height: 26px;
+  width: 24px;
+}
+
 /*ORDER PAGE*/
 
 /*make the background coral and the text white*/
-#orderForm{
-color: white;
-background-color: #f08080;
-font-size: 15px;
+#orderForm {
+  color: white;
+  background-color: #033500;
+  font-size: 15px;
 }
-
-
-/*
-.btn{
-  text-transform: uppercase;
-}
-*/
 
 /*changes the color of the button when you mouse over to look cool*/
-#submitButton{
-  background-color: #009100;
-  color: white;
+#submitButton {
+  background-color: pink;
+  color: black;
   text-transform: uppercase;
   font-size: 190%;
   text-decoration: overline;
+  margin-top: 15px;
+padding: 5px 5px 5px 5px;
+font-weight: bold;
 }
 
-image{
-  width: 100px;
-}
+/*end of stylesheet*/
