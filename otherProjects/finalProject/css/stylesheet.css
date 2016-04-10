@@ -5,21 +5,23 @@
 
 
 /*changed the font for the navigation bar*/
+
 #homePage, #models, #order {
   font-family: 'Amatic SC', cursive;
   font-size: 200%;
 }
 
 /*coloured the title white*/
+
 #main-title {
   color: white;
 }
-
 
 /*HOME PAGE*/
 
 
 /*added to the design of the heading*/
+
 #hat-swag {
   font-family: 'Roboto';
   font-size: 30px;
@@ -30,44 +32,50 @@
   padding-top: 7px;
 }
 
-.carousel-caption{
+/*made the carousel caption entirely visible*/
+
+.carousel-caption {
   font-size: 2px;
 }
 
 /*background colour and border colour and shape*/
-  .carousel {
-    background: #123123;
-    margin-top: 5px;
-    border: solid black 10px;
-  }
+
+.carousel {
+  background: #123123;
+  margin-top: 5px;
+  border: solid black 10px;
+}
 
 /*image placement*/
-  .carousel .item img {
-    margin: 0 auto;
-    /* Align slide image horizontally center */
-    max-height: 400px;
-  }
+
+.carousel .item img {
+  margin: 0 auto;
+  /* Align slide image horizontally center */
+  max-height: 400px;
+}
 
 /*adjustment*/
-  .bs-example {
-    margin: 20px;
-  }
+
+.bs-example {
+  margin: 20px;
+}
 
 /*carousel caption's size and style*/
-  h1 {
-    text-shadow: 20px;
-    font-size: 2700%;
-    text-transform: uppercase;
-    margin-top: 10%;
-    text-align: center;
-    margin-bottom: 20%;
-  }
 
+h1 {
+  text-shadow: 20px;
+  font-size: 2700%;
+  text-transform: uppercase;
+  margin-top: 10%;
+  text-align: center;
+  margin-bottom: 20%;
+}
 
 /*MODELS PAGE*/
 
 
 /*making the 3 titles bigger*/
+
 .type {
   padding-top: 20px;
   font-size: 200%;
@@ -76,6 +84,7 @@
 }
 
 /*justified, lighten and placed description*/
+
 .colour {
   padding: 10px 40px 10px 20px;
   text-align: justify;
@@ -83,6 +92,7 @@
 }
 
 /*making the word cursive and purple*/
+
 .style {
   font-family: cursive;
   font-size: 150%;
@@ -90,6 +100,7 @@
 }
 
 /*made the username in the reviews section bold and gave it room*/
+
 .buyerName {
   font-weight: bold;
   font-size: 15px;
@@ -99,11 +110,13 @@
 }
 
 /*made their comment italic*/
+
 .buyerComment {
   font-style: italic;
 }
 
 /*making the full hearts the perfect size beside the empties*/
+
 .fullheart {
   height: 26px;
   width: 24px;
@@ -111,14 +124,19 @@
 
 /*ORDER PAGE*/
 
-/*make the background coral and the text white*/
+
+/*make the background green and the text white*/
+
 #orderForm {
   color: white;
   background-color: #033500;
   font-size: 15px;
+  padding-top: 15px;
 }
 
-/*changes the color of the button when you mouse over to look cool*/
+/* button pink and big
+text uppercase and overlined */
+
 #submitButton {
   background-color: pink;
   color: black;
@@ -126,8 +144,16 @@
   font-size: 190%;
   text-decoration: overline;
   margin-top: 15px;
-padding: 5px 5px 5px 5px;
-font-weight: bold;
+  padding: 5px 5px 5px 5px;
+  font-weight: bold;
+}
+
+/*made text thinner for style*/
+
+#rate-the-site {
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: grey;
 }
 
 /*end of stylesheet*/
