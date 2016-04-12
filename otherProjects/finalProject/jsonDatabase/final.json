@@ -40,7 +40,6 @@
     "comment": "WOW"
   }]
 
-
 }, {
   "type": "Run Way",
   "colour": "This hat is great for playing dress up with your little cousins. Dancing around to Taylor Swift. And pretending that you are an animal. Fierce.",
@@ -62,6 +61,67 @@
     "comment": "Wear this errryday"
   }]
 
+}, {
+  "type": "WINTER",
+  "colour": "I wear this when I'm cold, which is often. It's starting to smell, I wear it so often. Often. Good song. Stay cozy with this soft piece of love.",
+  "style": "COZY",
+  "image": "images/winter.png",
+  "comments": [{
 
+    "username": "IliveWarm",
+    "stars": 3,
+    "comment": "swag casualy"
+  }, {
+    "username": "HatsAreFriends",
+    "stars": 2,
+    "comment": "I love this hat. Bought three of em."
+
+  }, {
+    "username": "MrSmith45",
+    "stars": 4,
+    "comment": "Wear this often"
+  }]
+
+}, {
+  "type": "TRAVEL",
+  "colour": "Another country, another me. I've transformed here and this hat is part of my new identity. I'm ambitious. I whip my hair back and forth.",
+  "style": "EXPLORER",
+  "image": "images/hair.png",
+  "comments": [{
+
+    "username": "ClappingSlap",
+    "stars": 4,
+    "comment": "swag casualy"
+  }, {
+    "username": "happyandiknowit",
+    "stars": 2,
+    "comment": "Warm ib ny head."
+
+  }, {
+    "username": "Chocolate",
+    "stars": 3,
+    "comment": "Wear this when i eat cheetos"
+  }]
+
+}, {
+  "type": "NEIGHBOUR",
+  "colour": "Siblings hats are the way to go when your rolling your eyes and don't want mother to see. We are hoodlems with good grades.",
+  "style": "ATTITUDE",
+  "image": "images/sass.png",
+  "comments": [{
+
+    "username": "Usermyname",
+    "stars": 2,
+    "comment": "dont play me"
+  }, {
+    "username": "happyandiknowit",
+    "stars": 4,
+    "comment": "snap back to reality."
+
+  }, {
+    "username": "loverscolide",
+    "stars": 5,
+    "comment": "need this hat heart eyes"
+  }]
 
 }]

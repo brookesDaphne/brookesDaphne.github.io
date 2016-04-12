@@ -9,11 +9,12 @@ $(document).ready(function() {
 
       //add active class to clicked li in nav
       $(this).addClass("active");
-
+      //put an id on it
       var page = $(this).attr("id");
       getPartial(page);
     })
 
+    //get partial
     function getPartial(partial) {
 
       $("#pageContent").hide();
@@ -21,10 +22,11 @@ $(document).ready(function() {
       //conditional logic
       if (partial == "homePage") { //get home.html
         $.get("partials/home.html", function(data) {
-          $("#pageContent").html(data);
-          $('.carousel').carousel();
+            $("#pageContent").html(data);
+            $('.carousel').carousel();
 
-        })
+          }) //end get
+          //if not home page, models page
       } else if (partial == "models") { //get models.html
 
         //js was pasted here from dogs.json from a previous assignment
@@ -46,9 +48,9 @@ $(document).ready(function() {
                   //'<div class="commentsContainer">';
 
                   '<div class="panel panel default">' +
-
+                  //reviews heading
                   '<div class="panel-heading" id="reviews-text">Reviews . . .</div>';
-
+                //put json in console
                 console.dir(item.comments);
 
                 //followed by a username, comment and rating section
@@ -82,7 +84,7 @@ $(document).ready(function() {
 
               }) //each cap
 
-
+            //html content
             $("#pageContent").html(html);
 
           }) //end get .json
@@ -91,110 +93,108 @@ $(document).ready(function() {
         //link order form hmtl page
       } else if (partial == "order") { //get order2.html
         $.get("partials/order2.html", function(data) {
-          $("#pageContent").html(data);
+            $("#pageContent").html(data);
 
-          //activate the datepicker
-          $('#startRentDate, #endRentDate').datepicker({});
+            //activate the datepicker
+            $('#startRentDate, #endRentDate').datepicker({});
 
-          //click event
-          //When you click the submitButton it validates
-          $("#submitButton").on("click", function() {
+            //click event
+            //When you click the submitButton it validates
+            $("#submitButton").on("click", function() {
 
-              //make empty areas red bc invalid
-              $("input, select").filter(function() {
-                return !this.value;
-              }).closest("div").addClass("has-error");
+                //make empty areas red bc invalid
+                $("input, select").filter(function() {
+                  return !this.value;
+                }).closest("div").addClass("has-error");
 
-              //remove the red for areas that have been filled in
-              $("input, select").filter(function() {
-                return this.value;
-              }).closest("div").removeClass("has-error");
+                //remove the red for areas that have been filled in
+                $("input, select").filter(function() {
+                  return this.value;
+                }).closest("div").removeClass("has-error");
 
-              //make a variable errors to target areas with errors
-              var errors = $(".has-error");
+                //make a variable errors to target areas with errors
+                var errors = $(".has-error");
 
-              //if there are no errors, confirm the request
-              if (errors.length < 1) {
-                //  alert("no");
+                //if there are no errors, confirm the request
+                if (errors.length < 1) {
+                  //  alert("no");
 
-                sendConfirmation();
-              }
+                  sendConfirmation();
+                }
 
-            }) //click
+              }) //click
 
-          //start takeAnOrder.js copy
+            //start takeAnOrder.js copy
 
-          //focus
-          $("#mySingleLineText").on("focus", function() {
+            //focus
+            $("#mySingleLineText").on("focus", function() {
+                $("#log").append("<br/>Input Focus")
+                $(this).css("background-color", "#EAF9E0")
+              })
+              //blur
+              .on("blur", function() {
+                $("#log").append("<br/>Input Change")
+                $(this).css("background-color", "#FFF")
+              });
+
+            //focus
+            $("#mySingleLineText2").on("focus", function() {
               $("#log").append("<br/>Input Focus")
               $(this).css("background-color", "#EAF9E0")
             })
+
             //blur
             .on("blur", function() {
               $("#log").append("<br/>Input Change")
               $(this).css("background-color", "#FFF")
             });
 
-          //focus
-          $("#mySingleLineText2").on("focus", function() {
-            $("#log").append("<br/>Input Focus")
-            $(this).css("background-color", "#EAF9E0")
-          })
+            //mouseenter
+            $("#myButton").on("mouseenter", function() {
+              $("#log").append("<br/>Button Mouse Enter")
+              $(this).text("Buy Now")
+            })
 
-          //blur
-          .on("blur", function() {
-            $("#log").append("<br/>Input Change")
-            $(this).css("background-color", "#FFF")
-          });
-
-          //mouseenter
-          $("#myButton").on("mouseenter", function() {
-            $("#log").append("<br/>Button Mouse Enter")
-            $(this).text("Buy Now")
-          })
-
-          //mouse leave
-          .on("mouseleave", function() {
-            $("#log").append("<br/>Button Mouse Leave")
-            $(this).text("Purchase")
-          });
-
-          //change
-          $("#mySelect").on("change", function() {
-            $("#log").append("<br/>Change Selection")
-            var val = $(this).val();
-            $("#mySelectMessage").html(val + " selected");
-          });
-
-          //click
-          $("#myButton").on("click", function() {
-
-            $("#log").append("<br>User clicked the button!");
-            var userOrder = {};
-            userOrder.myInput = $("#mySingleLineText").val();
-            userOrder.myInput2 = $("#mySingleLineText2").val();
-            userOrder.myTextArea = $("#myTextArea").val();
-            userOrder.mySelect = $("#mySelect").val();
-            userOrder.myRadio = $("[name='color']:checked").val();
-            userOrder.myCheckValues = [];
-
-            //each is a jquery loop for objects/arrays
-            $("[name='extra']:checked").each(function() {
-
-              userOrder.myCheckValues.push($(this).val());
+            //mouse leave
+            .on("mouseleave", function() {
+              $("#log").append("<br/>Button Mouse Leave")
+              $(this).text("Purchase")
             });
 
-            $("#log").append("<br>User clicked the button: " + userOrder.myInput + " " + userOrder.myInput2);
-            $("#log").append("<br>Value of textarea is: " + userOrder.myTextArea);
-            $("#log").append("<br>Value of select is: " + userOrder.mySelect);
-            $("#log").append("<br>Value of radio button is: " + userOrder.myRadio);
-            $("#log").append("<br> Value of check is: " + userOrder.myCheckValues.join());
-            $("#log").append("<br> Value of userOrder is " + " " + JSON.stringify(userOrder));
+            //change
+            $("#mySelect").on("change", function() {
+              $("#log").append("<br/>Change Selection")
+              var val = $(this).val();
+              $("#mySelectMessage").html(val + " selected");
+            });
 
-          })
-        })
+            //click
+            $("#myButton").on("click", function() {
 
-        //end takeAnOrder.js copy
+              $("#log").append("<br>User clicked the button!");
+              var userOrder = {};
+              userOrder.myInput = $("#mySingleLineText").val();
+              userOrder.myInput2 = $("#mySingleLineText2").val();
+              userOrder.myTextArea = $("#myTextArea").val();
+              userOrder.mySelect = $("#mySelect").val();
+              userOrder.myRadio = $("[name='color']:checked").val();
+              userOrder.myCheckValues = [];
+
+              //each is a jquery loop for objects/arrays
+              $("[name='extra']:checked").each(function() {
+
+                userOrder.myCheckValues.push($(this).val());
+              });
+              //json info text
+              $("#log").append("<br>User clicked the button: " + userOrder.myInput + " " + userOrder.myInput2);
+              $("#log").append("<br>Value of textarea is: " + userOrder.myTextArea);
+              $("#log").append("<br>Value of select is: " + userOrder.mySelect);
+              $("#log").append("<br>Value of radio button is: " + userOrder.myRadio);
+              $("#log").append("<br> Value of check is: " + userOrder.myCheckValues.join());
+              $("#log").append("<br> Value of userOrder is " + " " + JSON.stringify(userOrder));
+
+            })
+          }) //end
 
       }
 
