@@ -18,73 +18,80 @@ $(document).ready(function() {
 
       $("#pageContent").hide();
 
-      if (partial == "homePage") { //ajax get home.html
+      //conditional logic
+      if (partial == "homePage") { //get home.html
         $.get("partials/home.html", function(data) {
           $("#pageContent").html(data);
           $('.carousel').carousel();
 
         })
-      } else if (partial == "models") { //ajax get models.html
+      } else if (partial == "models") { //get models.html
 
         //js was pasted here from dogs.json from a previous assignment
+        //call or get json to html page using js
 
         $.getJSON("jsonDatabase/final.json", function(data) {
 
-          console.dir(data);
-          var html = "";
-          $.each(data, function(index, item) {
-              html += '<div class="col-md-4 cap">' +
-                '<div class="type">' + item.type + '</div>' +
-                '<div class="colour">' + item.colour + '</div>' +
-                '<div class="style">' + item.style + '</div>' +
-                '<img class="capImage" src="' + item.image + '"/>' +
-                //'<div class="commentsContainer">';
+            //data to console
+            console.dir(data);
+            //where the data goes
+            var html = "";
+            //each chunk of data has a type, colour, style, and image
+            $.each(data, function(index, item) {
+                html += '<div class="col-md-4 cap">' +
+                  '<div class="type">' + item.type + '</div>' +
+                  '<div class="colour">' + item.colour + '</div>' +
+                  '<div class="style">' + item.style + '</div>' +
+                  '<img class="capImage" src="' + item.image + '"/>' +
+                  //'<div class="commentsContainer">';
 
-                '<div class="panel panel default">' +
+                  '<div class="panel panel default">' +
 
-                '<div class="panel-heading">Reviews</div>';
+                  '<div class="panel-heading" id="reviews-text">Reviews . . .</div>';
 
-              console.dir(item.comments);
+                console.dir(item.comments);
 
-              $.each(item.comments, function(ind, i) {
-                  html += '<div class="buyerName">' + i.username + '</div>' +
-                    '<div class="buyerComment">' + i.comment + '</div>' +
-                    '<div class="buyerStars">';
+                //followed by a username, comment and rating section
+                $.each(item.comments, function(ind, i) {
+                    html += '<div class="buyerName">' + i.username + '</div>' +
+                      '<div class="buyerComment">' + i.comment + '</div>' +
+                      '<div class="buyerStars">';
 
-                  var numStars = Number(i.stars);
+                    //function to show the right amount of stars
+                    var numStars = Number(i.stars);
 
-                  for (var i = 1; i <= 5; i++) {
-                    if (i <= numStars) {
-                      html += '<img class="fullheart" src="images/fullheart.gif"/>';
+                    //if less than five full is used
+                    for (var i = 1; i <= 5; i++) {
+                      //conditional logic
+                      if (i <= numStars) {
+                        html += '<img class="fullheart" src="images/fullheart.gif"/>';
 
-                    } else {
-                      html += '<img src="images/emptyheart.gif"/>';
+                        //if not, an empty image is used
+                      } else {
+                        html += '<img src="images/emptyheart.gif"/>';
 
+                      }
                     }
-                  }
 
-                  html += '</div>'; //end stars
-                }) //each comment
+                    html += '</div>'; //end stars
+                  }) //each comment
 
-              html += '</div>' + //end panel
-                '</div>'; //col-md-4
-
-
-            }) //each cap
+                html += '</div>' + //end panel
+                  '</div>'; //col-md-4
 
 
-          $("#pageContent").html(html);
-
-        })
+              }) //each cap
 
 
-        //end of js pasted
+            $("#pageContent").html(html);
 
-        //I THINK U GET ORDER PAGE HERE
-      } else if (partial == "order") { //ajax get order.html
+          }) //end get .json
+          //end of js pasted
+
+        //link order form hmtl page
+      } else if (partial == "order") { //get order2.html
         $.get("partials/order2.html", function(data) {
           $("#pageContent").html(data);
-
 
           //activate the datepicker
           $('#startRentDate, #endRentDate').datepicker({});
@@ -115,8 +122,6 @@ $(document).ready(function() {
 
             }) //click
 
-
-
           //start takeAnOrder.js copy
 
           //focus
@@ -124,6 +129,7 @@ $(document).ready(function() {
               $("#log").append("<br/>Input Focus")
               $(this).css("background-color", "#EAF9E0")
             })
+            //blur
             .on("blur", function() {
               $("#log").append("<br/>Input Change")
               $(this).css("background-color", "#FFF")
@@ -162,14 +168,6 @@ $(document).ready(function() {
 
           //click
           $("#myButton").on("click", function() {
-
-            /*
-                var myInput = $("#mySingleLineText").val();
-                var myInput2 = $("#mySingleLineText2").val();
-                var myTextArea = $("#myTextArea").val();
-                var mySelect = $("#mySelect").val();
-                var myRadio = $("[name='color']:checked").val();
-            */
 
             $("#log").append("<br>User clicked the button!");
             var userOrder = {};
@@ -222,17 +220,16 @@ $(document).ready(function() {
 
         }) //formData
 
-        //alerts when they click the purchase button repeating their order
+      //alerts when they click the purchase button repeating their order
 
-alert("Sending to database and checking the validity of your credit" + JSON.stringify(order));
-$("#successMsg").html("Order Received!<br/><br/>" +
-order.catSelect + "will be delivered on" +
-order.startRentDate +
-"<img id='paws' src='images/pink.jpeg'>");
+      alert("Sending to database and checking the validity of your credit" + JSON.stringify(order));
+      $("#successMsg").html("<br/>Order Received!<br/>" +
+        "Your hat " + "will be delivered on " +
+        order.startRentDate);
 
     } //sendConfirmation
 
-    //begin the program, get the homepage
+    //begin the program, get the homepage carousel
     getPartial("homePage");
 
-  }) //end brackets for ready
+  }) //end brackets for doc ready

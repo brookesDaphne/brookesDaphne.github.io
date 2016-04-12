@@ -11,6 +11,12 @@
   font-size: 200%;
 }
 
+/*add colour to nav*/
+
+li {
+  background-color: #ccccff;
+}
+
 /*coloured the title white*/
 
 #main-title {
@@ -73,6 +79,10 @@ h1 {
 
 /*MODELS PAGE*/
 
+#reviews-text {
+  font-size: 150%;
+  color: purple;
+}
 
 /*making the 3 titles bigger*/
 
@@ -154,6 +164,11 @@ text uppercase and overlined */
   text-transform: uppercase;
   font-weight: lighter;
   color: grey;
+}
+#successMsg {
+  color: white;
+  text-align: center;
+  font-size: 25px;
 }
 
 /*end of stylesheet*/
